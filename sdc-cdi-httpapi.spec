@@ -22,14 +22,14 @@ Nagios probe to check functionality of HTTP-API service
 
 install -d %{buildroot}/%{_libexecdir}/argo-monitoring/probes/sdc-cdi-httpapi
 install -d %{buildroot}/%{_sysconfdir}/nagios/plugins/sdc-cdi-httpapi
-install -m 755 check_cdi_http-api.py %{buildroot}/%{_libexecdir}/argo-monitoring/probes/sdc-cdi-httpapi/check_cdi_http-api.py
+install -m 755 check_cdi_httpapi.py %{buildroot}/%{_libexecdir}/argo-monitoring/probes/sdc-cdi-httpapi/check_cdi_httpapi.py
 
 %files
 %dir /%{_libexecdir}/argo-monitoring
 %dir /%{_libexecdir}/argo-monitoring/probes/
 %dir /%{_libexecdir}/argo-monitoring/probes/sdc-cdi-httpapi
 
-%attr(0755,root,root) /%{_libexecdir}/argo-monitoring/probes/sdc-cdi-httpapi/check_cdi_http-api.py
+%attr(0755,root,root) /%{_libexecdir}/argo-monitoring/probes/sdc-cdi-httpapi/check_cdi_httpapi.py
 
 %changelog
 * Thu Aug 22 2019 Themis Zamani  <themiszamani@gmail.com> - 0.1-1
