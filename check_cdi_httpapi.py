@@ -122,8 +122,7 @@ def checkHealth(URL, timeout):
         return description, exit_code
 
     content = out.json()
-
-        resp = content['Response']['data']
+    resp = content['Response']['data']
 
     if resp != "Server is alive!":
         description = "WARNING - Unexpected response: %s" % resp
