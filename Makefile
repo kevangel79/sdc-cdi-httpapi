@@ -1,6 +1,6 @@
 PKGNAME=sdc-cdi-httpapi
 SPECFILE=${PKGNAME}.spec
-FILES=Makefile ${SPECFILE} check_cdi_http-api.py
+FILES=Makefile ${SPECFILE} check_cdi_httpapi.py
 
 PKGVERSION=$(shell grep -s '^Version:' $(SPECFILE) | sed -e 's/Version:\s*//')
 
