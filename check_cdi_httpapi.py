@@ -305,7 +305,7 @@ def checkBatchIfEnabled (batch_id, URL, token, exit_code, timeout):
             except requests.exceptions.RequestException as e:
                 print e
 
-              if out.status_code == 401:
+            if out.status_code == 401:
                 description = "CRITICAL - (checkBatchIfEnabled) Invalid credentials"
                 exit_code = 2
                 return description, exit_code, token, status
