@@ -1,5 +1,5 @@
 Name:		sdc-cdi-httpapi
-Version:	0.5
+Version:	0.5.1
 Release:	1%{?dist}
 Summary:	Nagios probe for SDC CDI http-api
 License:	GPLv3+
@@ -32,6 +32,8 @@ install -m 755 check_cdi_httpapi.py %{buildroot}/%{_libexecdir}/argo-monitoring/
 %attr(0755,root,root) /%{_libexecdir}/argo-monitoring/probes/sdc-cdi-httpapi/check_cdi_httpapi.py
 
 %changelog
+* Mon May 04 2020 Themis Zamani  <themiszamani@gmail.com> - 0.5-1
+- New healthcheck
 * Thu Aug 22 2019 Themis Zamani  <themiszamani@gmail.com> - 0.1-1
 - Initial version of the package. 
 * Thu Oct 18 2018 Mattia D'Antonio  <m.dantonio@cineca.it> - 0.1-1
