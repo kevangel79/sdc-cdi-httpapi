@@ -127,7 +127,7 @@ def checkHealth(URL, timeout):
     else:
         resp = content
 
-    if resp != "Server is alive!":
+    if resp != "Server is alive":
         description = "WARNING - Unexpected response: %s" % resp
         exit_code = 1
         return description, exit_code
@@ -377,7 +377,7 @@ def checkQualityCheck (batch_id, URL, token, exit_code, timeout):
         exit_code = 1
         return description, exit_code, token, status
     
-        content = out.json()
+    content = out.json()
     resp = content['Response']['data']
     status = resp['status']
     description = "OK - Quality Check is "+ status
