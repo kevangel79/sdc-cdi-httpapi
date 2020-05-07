@@ -127,7 +127,7 @@ def checkHealth(URL, timeout):
     else:
         resp = content
 
-    if resp != "Server is alive":
+    if resp != "Server is alive" and resp != "Server is alive!" :
         description = "WARNING - Unexpected response: %s" % resp
         exit_code = 1
         return description, exit_code
@@ -405,7 +405,6 @@ def deleteBatchJob( batch_id, URL, token, exit_code, timeout):
     headers = {'Authorization': 'Bearer %s' % token}
     try:
         out = requests.delete(url=u, timeout=timeout, headers=headers, data=json.dumps(responseBody))
-        print "test"
     except BaseException as e:
         description = "UNKNOWN - (deleteBatchJob) Unknown error: %s" % str(e)
         exit_code = 3
